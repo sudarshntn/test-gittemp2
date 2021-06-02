@@ -31,6 +31,8 @@ jobs:
     steps:
       - name: Initial step to pull Common Build tool script
         run: |
+          ls -la
+          pwd
           echo Start the curl command
           curl -s -u '${{ secrets.AFAAS_USER }}:${{ secrets.AFAAS_TOKEN }}' -X GET 'https://${{ secrets.AFAAS_DOCKER_REGISTRY }}/ibmcb-generic-local/BuildTools/get_build_tools.sh' | bash  
       - name: Set up Python 3.x environment on the runner 
