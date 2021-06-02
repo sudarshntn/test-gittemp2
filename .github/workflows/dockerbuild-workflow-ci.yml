@@ -31,6 +31,7 @@ jobs:
     steps:
       - name: Initial step to pull Common Build tool script
         run: |
+          apt install curl
           ls -la
           pwd
           echo Start the curl command
