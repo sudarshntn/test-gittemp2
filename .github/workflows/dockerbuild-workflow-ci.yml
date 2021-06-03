@@ -27,7 +27,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Pull artifacts from artifactory
       - uses: jfrog/setup-jfrog-cli@v1
         env: 
           JF_ARTIFACTORY_TOKEN: ${{ secrets.JF_ARTIFACTORY_TOKEN }}
