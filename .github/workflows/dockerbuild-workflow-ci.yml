@@ -31,13 +31,7 @@ jobs:
         env: 
           JF_ARTIFACTORY_TOKEN: ${{ secrets.JF_ARTIFACTORY_TOKEN }}
       - run: |
-          # Ping the server
-          jfrog rt ping
-          jfrog rt dl ibmcb-generic-local/BuildTools-testing/get_test_our.sh
-          ls -la
-          ./BuildTools-testing/get_test_our.sh
-          ls -la
-          cd travis-scripts
+          jfrog rt dl ibmcb-generic-local/BuildTools-testing/get_test_our.sh | bash
           ls -la
 
   build:
