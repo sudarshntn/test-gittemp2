@@ -35,7 +35,7 @@ jobs:
           jfrog rt ping
           jfrog rt dl ibmcb-generic-local/BuildTools-testing/get_test_our.sh
           ls -la
-          ./BuildTools-testing/get_test_our.sh
+          .${HOME}/BuildTools-testing/get_test_our.sh
           ls -la
           cd travis-scripts
           ls -la
