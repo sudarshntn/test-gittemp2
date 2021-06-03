@@ -31,8 +31,9 @@ jobs:
         env: 
           JF_ARTIFACTORY_TOKEN: ${{ secrets.JF_ARTIFACTORY_TOKEN }}
       - run: |
-          jfrog rt dl ibmcb-generic-local/BuildTools-testing/get_test_our.sh | bash
+          jfrog rt dl ibmcb-generic-local/BuildTools-testing/get_test_our.sh
           ls -la
+          bash BuildTools-testing/get_test_our.sh
 
   build:
     runs-on: ubuntu-latest
