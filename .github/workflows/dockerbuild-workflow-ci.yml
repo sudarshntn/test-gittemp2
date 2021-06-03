@@ -24,6 +24,20 @@ env:
   GITHUB_SERVER: 'GITHUB_SERVER'
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull artifacts from artifactory
+      - uses: jfrog/setup-jfrog-cli@v1
+        env: 
+          JF_ARTIFACTORY_TOKEN: ${{ secrets.JF_ARTIFACTORY_TOKEN }}
+      - run: |
+          # Ping the server
+          jfrog rt ping
+          jfrog rt dl ibmcb-generic-local/BuildTools-testing/get_test_our.sh
+          ls -la
+          ./get_test_our.sh
+
   build:
     runs-on: ubuntu-latest
     strategy:
