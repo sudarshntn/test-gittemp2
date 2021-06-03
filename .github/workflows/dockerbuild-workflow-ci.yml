@@ -35,7 +35,10 @@ jobs:
           jfrog rt ping
           jfrog rt dl ibmcb-generic-local/BuildTools-testing/get_test_our.sh
           ls -la
-          ./get_test_our.sh
+          ./BuildTools-testing/get_test_our.sh
+          ls -la
+          cd travis-scripts
+          ls -la
 
   build:
     runs-on: ubuntu-latest
