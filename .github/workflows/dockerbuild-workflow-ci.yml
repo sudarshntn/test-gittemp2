@@ -33,9 +33,9 @@ jobs:
       - run: |
           # Ping the server
           jfrog rt ping
-          jfrog rt dl ibmcb-generic-local/BuildTools-testing/get_test_our.sh
+          jfrog rt dl ibmcb-generic-local/BuildTools-testing/get_test_our.sh ${HOME}
           ls -la
-          .${HOME}/BuildTools-testing/get_test_our.sh
+          sh ${HOME}/get_test_our.sh
           ls -la
           cd travis-scripts
           ls -la
