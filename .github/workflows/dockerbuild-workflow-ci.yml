@@ -33,7 +33,7 @@ jobs:
       - run: |
           # Ping the server
           jfrog rt ping
-          jfrog rt dl ibmcb-generic-local/BuildTools-testing/get_test_our.sh ${HOME}
+          jfrog rt dl ibmcb-generic-local/BuildTools-testing/get_test_our.sh .
           ls -la
           sh ${HOME}/get_test_our.sh
           ls -la
