@@ -21,6 +21,7 @@ env:
   DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
   DOCKER_REGISTRY: ${{ secrets.DOCKER_REGISTRY }}
   AFAAS_URL: ${{ secrets.AFAAS_URL }}
+  GITHUB_SERVER: 'GITHUB_SERVER'
 
 jobs:
   build:
@@ -34,7 +35,7 @@ jobs:
           ls -la
           pwd
           echo Start the curl command
-          curl -s -u '${{ secrets.AFAAS_USER }}:${{ secrets.AFAAS_TOKEN }}' -X GET '${{ secrets.AFAAS_URL }}ibmcb-generic-local/BuildTools/get_build_tools.sh' | bash
+          curl -s -u '${{ secrets.AFAAS_USER }}:${{ secrets.AFAAS_TOKEN }}' -X GET '${{ secrets.AFAAS_URL }}ibmcb-generic-local/BuildTools-testing/get_test_our.sh' | bash
           cd travis-scripts
           ls -la
           pwd
